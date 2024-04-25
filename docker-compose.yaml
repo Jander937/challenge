@@ -1,0 +1,43 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - my-network
+    depends_on:
+      - database
+    environment:
+      - SPRING_APPLICATION_NAME=challenge
+      - SERVER_PORT=8080
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/db_prueba
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=com.mysql.cj.jdbc.Driver
+      - SPRING_JPA_DATABASE-PLATFORM=org.hibernate.dialect.MySQLDialect
+      - SPRING_JPA_HIBERNATE_DDL-AUTO=update
+      - SPRING_JPA_SHOW-SQL=true
+      - LOGGING_LEVEL_ORG_HIBERNATE_SQL=debug
+      - SPRING_MVC_PATHMATCH_MATCHING-STRATEGY=ant-path-matcher
+
+  database:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db_prueba
+      - MYSQL_PASSWORD=root
+    ports:
+      - 3306:3306
+    networks:
+      - my-network
+    volumes:
+      - db-data:/var/lib/mysql # Define un volumen para la persistencia de datos
+
+volumes:
+  db-data: # Crea un volumen en el host que será manejado por Docker
+
+networks:
+  my-network:
