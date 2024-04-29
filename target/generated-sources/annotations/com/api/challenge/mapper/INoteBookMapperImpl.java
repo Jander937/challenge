@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-04-29T11:22:37-0500",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 22 (Oracle Corporation)"
+    date = "2024-04-29T18:49:56-0500",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 21.0.2 (Oracle Corporation)"
 )
 @Component
 public class INoteBookMapperImpl implements INoteBookMapper {

@@ -1,0 +1,12 @@
+com\api\challenge\service\NoteBookService.class
+com\api\challenge\ChallengeApplication.class
+com\api\challenge\dto\errorDTO\NoteBookErrorDTO.class
+com\api\challenge\mapper\INoteBookMapperImpl.class
+com\api\challenge\mapper\INoteBookMapper.class
+com\api\challenge\service\Impl\NoteBookServiceImpl.class
+com\api\challenge\entities\NoteBookEntity.class
+com\api\challenge\controllers\NoteBookController.class
+com\api\challenge\config\SwaggerConfig.class
+com\api\challenge\repositories\INoteBookRepository.class
+com\api\challenge\dto\NoteBookDTO.class
+com\api\challenge\helpers\Status.class
