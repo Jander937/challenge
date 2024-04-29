@@ -5,7 +5,7 @@ FROM adoptopenjdk:17-jdk
 WORKDIR /app
 
 # Copiar el archivo JAR de la API al contenedor
-COPY target/challenge-0.0.1-SNAPSHOT.jar challenge.jar
+COPY target/challenge-0.0.1-SNAPSHOT.jar original
 
 # Puerto en el que la API escucha dentro del contenedor
 EXPOSE 8080
