@@ -1,5 +1,5 @@
 # Imagen base para el contenedor
-FROM adoptopenjdk:17-jdk-hotspot
+FROM render/adoptopenjdk:17-jdk-hotspot
 
 # Directorio de trabajo dentro del contenedor
 WORKDIR /app
