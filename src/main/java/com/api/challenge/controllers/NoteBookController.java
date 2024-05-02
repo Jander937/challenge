@@ -36,7 +36,7 @@ public class NoteBookController {
                     .body(errorPersonalized.getMessageError());
         }
     }
-    @GetMapping("/search")
+    @GetMapping("/users")
     public ResponseEntity<?> searchAll(){
         try {
             List<NoteBookDTO> noteBookDTOList = (List<NoteBookDTO>) this.noteBookService.searchAll();
